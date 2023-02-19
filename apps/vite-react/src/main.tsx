@@ -2,9 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App'
+import 'react-app-polyfill/stable';
 
-createRoot(document.getElementById('root') as HTMLElement).render(
+const root = createRoot(document.getElementById('root') as HTMLElement)
+
+root.render(
   <StrictMode>
     <App />
-  </StrictMode>,
-)
+  </StrictMode>
+);

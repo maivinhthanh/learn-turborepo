@@ -5,15 +5,25 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": " tsc && vite build",
+    "build": " node patchJestDom.js && tsc && vite build",
     "preview": "vite preview",
     "coverage": "vitest run --coverage",
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "lint": "eslint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.2",
+    "@sentry/react": "^7.38.0",
+    "eslint-config-custom": "*",
+    "i18next": "^22.4.10",
     "react": "^18.2.0",
+    "react-app-polyfill": "^3.0.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.1.5",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.1",
+    "redux-persist": "^6.0.0",
     "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
@@ -23,7 +33,7 @@
     "@types/node": "^18.14.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react-swc": "^3.2.0",
     "@vitest/coverage-c8": "^0.28.5",
     "@vitest/ui": "^0.28.5",
     "eslint": "^8.34.0",
@@ -33,5 +43,8 @@
     "typescript": "^4.9.5",
     "vite": "^4.1.0",
     "vitest": "^0.28.5"
+  },
+  "stackblitz": {
+    "startCommand": "npm run test:ui"
   }
 }
