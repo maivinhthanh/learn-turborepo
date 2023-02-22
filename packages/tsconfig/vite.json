@@ -17,12 +17,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "types": ["vitest/globals"],
-    "incremental": true,
-    "paths": {
-      "@@/*": ["./src/components/*"],
-      "@/*": ["./src/*"],
-      "#root/*": ["."]
-    }
+    "incremental": true
   },
   "include": ["./src"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -1,9 +1,9 @@
 import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import AboutUs from "../pages/AbousUs";
-import Home from "../pages/Home";
-import NotFoundPage from "../pages/NotFoundPage";
-import SplashScreen from "../pages/SplashScreen";
+import NotFoundPage from "@/pages/NotFoundPage";
+import SplashScreen from "@/pages/SplashScreen";
+const Home = React.lazy(() => import('@/modules/home/Home'));
+const AboutUs = React.lazy(() => import('@/pages/AbousUs'));
 
 const routes = createBrowserRouter([
   {
