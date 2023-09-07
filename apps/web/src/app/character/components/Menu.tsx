@@ -1,13 +1,15 @@
+"use client";
+
 import { faChild, faEye, faFaceGrinWide, faHatCowboy, faShirt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { MATERIAL_CHARACTER } from './constant';
+import { MATERIAL_CHARACTER } from '../constant';
 
 export default function Menu({
   active,
   onClick,
 }: {
   active: String,
-  onClick: (string) => void
+  onClick: (item: string) => void
 }): JSX.Element {
   const listMenu = [
     {
