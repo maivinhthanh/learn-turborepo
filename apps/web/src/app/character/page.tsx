@@ -1,9 +1,11 @@
-import { Card } from "ui";
+import Menu from "./Menu";
+import { MATERIAL_CHARACTER } from './constant';
 
 export default function Character(): JSX.Element {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Card title={""} href={""}>thanh</Card>
+    <main className="flex min-h-screen items-center p-12">
+      <Menu active={MATERIAL_CHARACTER.SKIN} onClick={()=>{}}></Menu>
+      <div className="flex-initial"></div>
     </main>
   );
 }
