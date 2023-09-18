@@ -9,9 +9,14 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-      },
-      animation: {
-        'fade-in': 'fade-in 1s ease-in-out', // Adjust the duration and timing function as needed
+        'zoom-in': {
+          '0%': { transform: scale(1, 1) },
+          '100%': { transform: scale(0.7, 0.7) },
+        },
+        'zoom-out': {
+          '0%': { transform: scale(0.7, 0.7) },
+          '100%': { transform: scale(1, 1) },
+        },
       },
     },
   },
